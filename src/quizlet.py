@@ -23,8 +23,13 @@ for i in xrange(len(questions)):
 	questions[random_index] = temp_question
 	questions[i] = random_question
 
-for question in questions:
+for index, question in enumerate(questions):
 	print line_skips
+	if len(questions) - index == 1:
+		print str(len(questions) - index) + " question left"
+	else:
+		print str(len(questions) - index) + " questions left"
+	print '\n'
 	print question
 	print '\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n'
 	raw_input('Press enter to go to next question...')
