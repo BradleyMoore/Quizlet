@@ -4,7 +4,8 @@ import os
 import sys
 import random
 
-line_skips = '\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n'
+clear_screen = '\n'*19
+placement = '\n'*14
 random_question = ''
 random_index = 0
 temp_question = ''
@@ -24,12 +25,12 @@ for i in xrange(len(questions)):
 	questions[i] = random_question
 
 for index, question in enumerate(questions):
-	print line_skips
+	print clear_screen
 	if len(questions) - index == 1:
 		print str(len(questions) - index) + " question left"
 	else:
 		print str(len(questions) - index) + " questions left"
 	print '\n'
 	print question
-	print '\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n'
+	print placement
 	raw_input('Press enter to go to next question...')
